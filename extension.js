@@ -45,35 +45,32 @@ class Indicator extends PanelMenu.Button {
 		let h = now.getHours();
         let icon = '';
 
-		if( d == 1 && h < 12 ){
-            icon = '0';
-        } else if( d == 1 && h >= 12 ){
-            icon = '0';
-        } else if( d == 2 && h < 12 ){
-            icon = '1';
-        } else if( d == 2 && h >= 12 ){
-            icon = '2';
-        } else if( d == 3 && h < 12 ){
-            icon = '3';
-        } else if( d == 3 && h >= 12 ){
-            icon = '4';
-        } else if( d == 4 && h < 12 ){
-			icon = '5';
-        } else if( d == 4 && h >= 12 ){
-            icon = '6';
-        } else if( d == 5 && h < 12 ){
-            icon = '7';
-        } else if( d == 5 && h >= 12 ){
-            icon = '8';
-        } else if( d == 6 && h < 12 ){
-            icon = '4';
-        } else if( d == 6 && h >= 12 ){
-            icon = '3';
-        } else if( d == 0 && h < 12 ){
-            icon = '2';
-        } else if( d == 0 && h >= 12 ){
-            icon = '1';
+        switch (d) {
+            case 1:
+                icon = h < 12 ? '0' : '0';
+                break;
+            case 2:
+                icon = h < 12 ? '1' : '2';
+                break;
+            case 3:
+                icon = h < 12 ? '3' : '4';
+                break;
+            case 4:
+                icon = h < 12 ? '5' : '6';
+                break;
+            case 5:
+                icon = h < 12 ? '7' : '8';
+                break;
+            case 6:
+                icon = h < 12 ? '4' : '3';
+                break;
+            case 0:
+                icon = h < 12 ? '2' : '1';
+                break;
+            default:
+                break;
         }
+        
         let classname = 'base wom-'+icon;
 		return classname;    
     }
