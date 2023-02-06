@@ -47,57 +47,31 @@ class Indicator extends PanelMenu.Button {
 
 		if( d == 1 && h < 12 ){
             icon = '0';
-        }
-
-		if( d == 1 && h >= 12 ){
+        } else if( d == 1 && h >= 12 ){
             icon = '0';
-        }
-
-		if( d == 2 && h < 12 ){
+        } else if( d == 2 && h < 12 ){
             icon = '1';
-        }
-
-		if( d == 2 && h >= 12 ){
+        } else if( d == 2 && h >= 12 ){
             icon = '2';
-        }
-
-		if( d == 3 && h < 12 ){
+        } else if( d == 3 && h < 12 ){
             icon = '3';
-        }
-
-		if( d == 3 && h >= 12 ){
+        } else if( d == 3 && h >= 12 ){
             icon = '4';
-        }
-
-		if( d == 4 && h < 12 ){
+        } else if( d == 4 && h < 12 ){
 			icon = '5';
-        }
-
-		if( d == 4 && h >= 12 ){
+        } else if( d == 4 && h >= 12 ){
             icon = '6';
-        }
-
-		if( d == 5 && h < 12 ){
+        } else if( d == 5 && h < 12 ){
             icon = '7';
-        }
-
-		if( d == 5 && h >= 12 ){
+        } else if( d == 5 && h >= 12 ){
             icon = '8';
-        }
-
-		if( d == 6 && h < 12 ){
+        } else if( d == 6 && h < 12 ){
             icon = '4';
-        }
-
-        if( d == 6 && h >= 12 ){
+        } else if( d == 6 && h >= 12 ){
             icon = '3';
-        }
-
-		if( d == 0 && h < 12 ){
+        } else if( d == 0 && h < 12 ){
             icon = '2';
-        }
-
-		if( d == 0 && h >= 12 ){
+        } else if( d == 0 && h >= 12 ){
             icon = '1';
         }
         let classname = 'base wom-'+icon;
